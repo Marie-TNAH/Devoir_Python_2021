@@ -1,1 +1,1 @@
-Ce dépôt a vocation à présenter une application python développée dans le cadre du master Technologies numériques appliquées à l'histoire.
+Dans le cadre du master Technologies numériques appliquées à l'histoire, nous avons développé une application python 'Mise en registre' présentant des documents médiévaux ayant été enregistrés par le parlement de Paris sous le règne de Louis XI. 
