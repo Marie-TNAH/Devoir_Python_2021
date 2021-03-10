@@ -7,4 +7,4 @@
 
 📜 L'application présente les documents en question, chacun est décrit par une notice. L'application peut être enrichie : les notices peuvent être modifiées, supprimées ou ajoutées sous réserve que l'utilisateur s'inscrive et s'identifie. Il est possible d'effectuer des recherches plein-texte au sein de l'application ou de consulter des index selon ses intérêts. 
 
-A tous ceux qui ces lettres verront et auront, Salut. Si le hasard vous a fait atterrir sur cette page, nous sollicitons votre indulgence car nous sommes en train de travailler au transfert de notre devoir depuis notre ordiateur vers Github. Donné au Puy-en-Velay, le Xe jour de mars l'an de l'Incarnation de notre seigneur II^M et XXI. Marie-TNAH pour vous servir.
+A tous ceux qui ces lettres verront et auront, Salut. Si le hasard vous a fait atterrir sur cette page, nous sollicitons votre indulgence car nous sommes en train de travailler au transfert de notre devoir depuis notre ordinateur vers Github. Donné au Puy-en-Velay, le Xe jour de mars l'an de l'Incarnation de notre seigneur II^M et XXI. Marie-TNAH pour vous servir.
