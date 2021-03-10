@@ -1,6 +1,6 @@
 💻Dans le cadre de notre deuxième année de master Technologies numériques appliquées à l'histoire à l'Ecole nationale des chartes, nous avons développé une application python 'Mise en registre' présentant des documents médiévaux ayant été enregistrés par le parlement de Paris sous le règne de Louis XI.
 
-                                                            👑Mise en registre👑 
+                                                        👑Mise en registre👑 
 
 📚 	Les données des documents évoquées ont été collectées par Anne Fleuret dans le cadre de son master de recherche en histoire médiévale à l'université Panthéon-Sorbonne. Elle nous permet gracieusement de les exploiter pour notre travail. Elle-même s'est appuyée sur le travail d'Henri Stein, chartiste, archiviste et historien, et plus particulièrement sur son inventaire des registres du parlement de Paris.📙
 
