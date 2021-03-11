@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<title>Mis en registre !</title>
+    <head>
+        <p><font style="font-family:eufm10">Mis en registre !</font></p>
+        <p>
+        {% if current_user.is_authenticated %}
+        
+            {{current_user.user_login}}   
+        </p>
+       {% endif %}
+    </head>
+<body>
+{% if enregistrements %}
+<h1><p align="center">Actuellement, {{enregistrements|length}} documents enregistrés par le parlement de Paris sous le règne de Louis XI sont à découvrir sur notre application !</p></h1>
+{% endif %}
+ <span style="position: absolute; left: 550px">
+<a href="https://fr.wikipedia.org/wiki/Louis_XI#/media/Fichier:Louis_XI_(1423-1483).jpg"><img src="static/images/louis11.jpg" alt="Louis XI" style="width : 20%"/></a>
+<figcaption><font color="grey" size="1">
+Portrait de Louis XI, huile sur toile <br/>attribuée à Jacob de Littemont (vers 1469).</font></figcaption>
+</span>
+
+<span style="position: absolute; left: 900px">
+    <a href="https://criminocorpus.org/fr/expositions/art-et-justice/plume-de-greffier/la-galerie-du-parlement/">
+<img src="static/images/gallerie.png" alt="parlement" style="width : 90%"/></a>
+<figcaption><font color="grey" size="1">
+Les archives du parlement de Paris au sein des "grands dépôts" (construits sous Louis-Philippe et Napoléon III) dans une gallerie évoquant l'ancien siège de l'institution (Archives nationales, Paris).</font></figcaption>
+</span>
+<br/>
+<br/>
+{% if not current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for('inscription')}}" method="GET">
+      <button>S'inscrire</button>  
+    </form>
+</div>
+<br/>
+<div>
+    <form class="form-inline" action="{{url_for('connexion')}}" method="GET">
+      <button>Se connecter</button>  
+    </form>
+</div>
+{% endif %}
+<br/>
+{% if current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for('deconnexion')}}" method="GET">
+      <button>Se déconnecter</button>  
+    </form>
+</div>
+<br/>
+{% endif %}
+<div>
+<form class="form-inline" action="{{url_for("recherche")}}" method="GET">
+          <input class="form-control" name="keyword" type="search" placeholder="Recherche rapide" aria-label="Recherche">
+          <button class="btn btn-outline-info" type="submit">Rechercher dans les regestes</button>
+</form>
+<br/>
+<form class="form-inline" action="{{url_for("recherche_avancee")}}" method="GET">
+    <input class="form-control" name="keyword" type="search" placeholder="Recherche avancée" aria-label="Recherche">
+    <button>Elargir votre recherche</button>
+</form>
+<br/>
+<form class="form-inline" action="{{url_for("recherche_nature")}}" method="GET">
+    <select name="enregistrement_nature">
+        <option value="Charte">Charte</option>
+        <option value="Lettre patente">Lettre patente</option>
+        <option value="Mandement">Mandement</option>
+        <option value="Ordonnance">Ordonnance</option>
+    </select>
+    <button>Rechercher un type de documents enregistrés</button>   
+</form>
+</div>
+<br/>
+<div>
+    <form class="form-inline" action="{{url_for("index")}}" method="GET">
+    <button>Consulter les index !</button>
+    </form>
+</div>
+<br/>
+{% if current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for("ajout_document")}}" method="GET">
+      <button>Ajouter un document à la base</button>  
+    </form>
+</div>
+{% endif %}
+<br/>
+<div>
+
+{% if enregistrements %}
+    <p>{{enregistrements|length}} documents n'attendent que vous ! Ils vous sont présentés selon l'ordre auxquels ils ont été ajoutés dans la base.</p>
+
+        <ul>
+            {% for enregistrement in enregistrements_page.items %}
+                <li align="justify"><a href="{{url_for('enregistrement', enregistrement_id=enregistrement.enregistrement_id)}}">
+                    {{enregistrement.enregistrement_date}}</a>, <b>{{enregistrement.enregistrement_motif}}</b> : {{enregistrement.enregistrement_regeste}}</li>
+            {% endfor %}
+        </ul>
+
+<p> 
+    <nav aria-label="research-pagination"><font color="brown" size="2">pages :</font>
+      
+        {% for page in enregistrements_page.iter_pages() %}
+            {% if page %}
+
+              {% if page != enregistrements_page.page %}
+                
+                 <a class="page-link" href="{{ url_for('decouvrir', page=page) }}"><font color="brown" size="2">{{page}}</font></a>
+            
+              {% else %}
+                
+                  <a class="page-link"><font color="brown" size="2">{{page}} <span class="sr-only">(actuelle)</span></font></a>
+           
+              {% endif %}
+
+            {% else %}
+             
+                  <a class="page-link"><font color="brown" size="2">...</font></a>
+          
+            {% endif %}
+
+        {%- endfor %}
+     
+    </nav>
+</p>
+    </div>   
+{% endif %}
+<div>
+<p><font size="3"><a href="{{url_for('index')}}">Explorez les index</a> <a href="{{url_for('accueil')}}">Retour à l'accueil</a> <a href="{{url_for('presentation')}}">L'origine de l'application</a></font></p>
+</div>
+</body>
+</html>

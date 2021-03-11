@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<title>Mis en registre !</title>
+    <head>
+        <p style="font-family:eufm10">Mis en registre !</p>
+        {% if current_user.is_authenticated %}
+        <p>
+            {{current_user.user_login}}   
+        </p>
+       {% endif %}
+    </head>
+<body leftmargin="125">    
+<h1 style="font-family:eufm10">Consultez les index</h1>
+<div>
+<p>Les index vous permettent d'effectuer vos recherches sur les actes enregistrés par le parlement de Paris selon différents biais :
+	<ul>
+		<li>le regeste ;</li>
+		<li>la nature du document ;</li>
+		<li>la date du document enregistré ;</li>
+		<li>l'objet du document ;</li>
+		<li>la date d'enregistrement du document ;</li>
+		<li>le mode d'enregistrement de l'acte ;</li>
+		<li>la date d'enregistrement du document à la chambre des comptes (elle n'est pas automatique).</li>
+	</ul>
+A chaque fois, ces informations sont accompagnées du regeste. Bonne recherche !
+</p>
+<ul>
+    <li><a href="{{url_for('index_id')}}">Index des regestes</a></li>
+    <li><a href="{{url_for('index_nature')}}">Index des types de documents</a></li>
+    <li><a href="{{url_for('index_datedoc')}}">Index date des documents</a></li>
+    <li><a href="{{url_for('index_motif')}}">Index des objets des documents</a></li>
+    <li><a href="{{url_for('index_date')}}">Index des dates d'enregistrement des documents</a></li>
+    <li><a href="{{url_for('index_mode')}}">Index des modes d'enregistrement des documents</a></li>
+    <li><a href="{{url_for('index_chcomptes')}}">Index des documents également enregistrés à la Chambre des comptes</a></li>
+    <li><a href="{{url_for('non_chcomptes')}}">Index des documents n'ayant pas été enregistrés à la Chambre des comptes</a></li>
+</ul>
+
+    <p><a href="{{url_for('accueil')}}">Retour à l'accueil</a> <a href="{{url_for('decouvrir')}}">Poursuivre l'exploration de la base</a> <a href="{{url_for('presentation')}}">L'origine de l'application</a></p>
+</div>
+</body>
+</html>

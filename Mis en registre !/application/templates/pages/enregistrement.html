@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<title>Mis en registre !</title>
+    <head>
+        <p style="font-family:eufm10">Mis en registre !</p>
+        {% if current_user.is_authenticated %}
+        <p>
+            {{current_user.user_login}}   
+        </p>
+       {% endif %}
+{% if not current_user.is_authenticated %}
+<font size="1">
+<div>
+    <form class="form-inline" action="{{url_for('inscription')}}" method="GET">
+      <button>S'inscrire</button>  
+    </form>
+</div>
+<br/>
+<div>
+    <form class="form-inline" action="{{url_for('connexion')}}" method="GET">
+      <button>Se connecter</button>  
+    </form>
+</div>
+{% endif %}
+{% if current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for('deconnexion')}}" method="GET">
+      <button>Se déconnecter</button>  
+    </form>
+</div>
+{% endif %}
+<br/>
+<div>
+<form class="form-inline" action="{{url_for("recherche")}}" method="GET">
+          <input class="form-control" name="keyword" type="search" placeholder="Recherche rapide" aria-label="Recherche">
+          <button class="btn btn-outline-info" type="submit">Rechercher dans les regestes</button>
+</form>
+<br/>
+<form class="form-inline" action="{{url_for("recherche_avancee")}}" method="GET">
+    <input class="form-control" name="keyword" type="search" placeholder="Recherche avancée" aria-label="Recherche">
+    <button>Elargir votre recherche</button>
+</form>
+<br/>
+<form class="form-inline" action="{{url_for("recherche_nature")}}" method="GET">
+    <select name="enregistrement_nature">
+        <option value="Charte">Charte</option>
+        <option value="Lettre patente">Lettre patente</option>
+        <option value="Mandement">Mandement</option>
+        <option value="Ordonnance">Ordonnance</option>
+    </select>
+    <button>Rechercher un type de documents enregistrés</button>   
+</form>
+</div>
+<br/>
+<div>
+    <form class="form-inline" action="{{url_for("index")}}" method="GET">
+    <button>Consulter les index !</button>
+    </form>
+</div>
+<br/>
+{% if current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for("ajout_document")}}" method="GET">
+      <button>Ajouter un document à la base</button>  
+    </form>
+</div>
+{% endif %}
+</font>
+    </head>
+    <br/>
+<body leftmargin="125">
+
+<table border="1px" style=" border-color:#00FFFF;" class="tabcenter"><tr>
+   <td align="center">
+   
+{% if enregistrement %}
+        <h1>{{enregistrement.enregistrement_regeste}}</h1>
+
+        <dl>
+            <dt><font color="grey">Nature du document enregistré :</font></dt><dd>{{enregistrement.enregistrement_nature}}</dd>
+            <dt><font color="grey">Date du document enregistré :</font></dt><dd>{{enregistrement.enregistrement_datedoc}}</dd>
+            <dt><font color="grey">Objet du document original :</font></dt><dd>{{enregistrement.enregistrement_motif}}</dd>
+            <dt><font color="grey">Date de l'enregistrement :</font></dt><dd>{{enregistrement.enregistrement_date}}</dd>
+            <dt><font color="grey">Mode de l'enregistrement :</font></dt><dd>{{enregistrement.enregistrement_mode}}</dd>
+            <dt><font color="grey">Enregistrement à la cour des comptes :</font></dt><dd>{{enregistrement.enregistrement_chcomptes}}</dd>
+        </dl>
+    {% else %}
+        <p>La base de données est en cours de constitution.</p>
+    {% endif %}
+</td>
+</tr>
+</table>
+    {% if current_user.is_authenticated %}
+<p>
+    <form class="form-inline" action="{{url_for('modification', enregistrement_id=enregistrement.enregistrement_id)}}" method="GET">
+      <button>Modifier</button>  
+    </form>
+<br/>
+    <form class="form-inline" action="{{url_for('suppression_demandee', enregistrement_id=enregistrement.enregistrement_id)}}" method="GET">
+      <button>Supprimer</button>  
+    </form>
+</p>
+    {% endif %}
+    <p><a href="{{url_for('accueil')}}">Retour à l'accueil</a> <a href="{{url_for('index')}}">Consulter les index</a> <a href="{{url_for('decouvrir')}}">Poursuivre l'exploration de la base</a> <a href="{{url_for('presentation')}}">L'origine de l'application</a></p>
+</body>
+</html>
