@@ -105,7 +105,7 @@ Les archives du parlement de Paris au sein des "grands dépôts" (construits sou
   </ul>
 </div>
 <div>
-<p><a href="{{url_for('accueil')}}">Retour à l'accueil</a> <a href="{{url_for('index')}}">Explorez les index</a> <a href="{{url_for('decouvrir')}}">Découvrir les actes enregistrés</a></p>
+<p><a href="{{url_for('accueil')}}">Retour à l'accueil</a> <a href="{{url_for('index')}}">Explorez les index</a> <a href="{{url_for('decouvrir')}}">Découvrir les actes enregistrés</a> {% if current_user.is_authenticated %}<a href="{{url_for('fonctionnement')}}">Voir l'évolution de la base</a>{% endif %}</p>
 </div>
 </body>
 </html>
