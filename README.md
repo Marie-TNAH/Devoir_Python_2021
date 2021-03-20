@@ -13,7 +13,7 @@ L'application a été créée dans le cadre de l'évaluation du cours python dis
 📜 	L'application présente les documents enregistrés par le parlement de Paris, c'est à dire copiés dans un registre. Chacun d'entre eux est renseigné par une notice. Les utilisateurs peuvent effectuer des recherches plein-texte parmi les regestes ou dans l'ensembles des données fournies. Ils peuvent également rechercher un type de document précis. Afin d'avoir une vue d'ensemble des documents enregistrés, ils peuvent également consulter les index.
 
 Les données de l'application peuvent être modifiées et enrichies : pour ce faire, l'utilisateur doit s'inscrire et se connecter. Il pourra ainsi accéder à de nouvelles fonctionnalités :
-* modifiées les données d'une notice ;
+* modifier les données d'une notice ;
 * supprimer une notice ;
 * ajouter une notice. 
 
