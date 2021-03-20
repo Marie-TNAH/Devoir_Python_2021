@@ -25,9 +25,18 @@ Toutes ces modifications sont référencées : l'utilisateur connecté peut éga
 
 Pour utliser cette application, vous devez être sous Linux et utliser Python3. Vous devez cloner le dépôt github, y créer un environnement virtuel, installer les librairies utilisées et, enfin, lancer l'application.
 
+Installer l'application :
 * Cloner le dépôt Devoir_Python_2021 : `git clone https://github.com/Marie-TNAH/Devoir_Python_2021`;
 * Aller dans le dossier Devoir_Python_2021 : `cd Devoir_Python_2021`;
 * Créer l'environnement virtuel : `virtualenv env -p python3` ;
 * Installer les librairies :
-  * installer le framework Flask
+  * installer le framework Flask : `pip install Flask`;
+  * installer l'extension Flask-SQLAlchemy : `pip install flask_sqlalchemy`;
+  * installer la library Flask-Login : `pip install flask-login` ;
+
+Lancer l'application :
+* Activer l'environnement virtuel : `source env/bin/activate` ;
+* Aller dans le dossier Mis en registre : `cd Mis\ en\ registre\ \!/` ;
+* Lancer l'application : `python routes.py` ;
+* Cliquer sur le lien fourni : http://127.0.0.1:5000/. 
 
