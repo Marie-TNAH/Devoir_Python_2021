@@ -1,6 +1,6 @@
 Dans le cadre de notre deuxième année de master Technologies numériques appliquées à l'histoire à l'Ecole nationale des chartes, nous avons développé une application python, 'Mise en registre !', présentant des documents médiévaux ayant été enregistrés par le parlement de Paris sous le règne de Louis XI.
 
-# 👑Mise en registre !👑 
+# 👑 Mise en registre ! 👑 
 
 ## L'origine de l'application
 
@@ -25,6 +25,6 @@ Toutes ces modifications sont référencées : l'utilisateur connecté peut éga
 
 Pour utliser cette application, vous devez être sous Linux et utliser Python3. Vous devez cloner le dépôt github, y créer un environnement virtuel, installer les librairies utilisées et, enfin, lancer l'application.
 
-* Cloner le dépôt Devoir_Python_2021 : git clone https://github.com/Marie-TNAH/Devoir_Python_2021
+* Cloner le dépôt Devoir_Python_2021 : `git clone https://github.com/Marie-TNAH/Devoir_Python_2021`;
 * 
 
