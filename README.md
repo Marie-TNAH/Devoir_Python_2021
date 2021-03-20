@@ -29,5 +29,5 @@ Pour utliser cette application, vous devez être sous Linux et utliser Python3. 
 * Aller dans le dossier Devoir_Python_2021 : `cd Devoir_Python_2021`;
 * Créer l'environnement virtuel : `virtualenv env -p python3` ;
 * Installer les librairies :
-`* installer le framework Flask`
+  * installer le framework Flask
 
