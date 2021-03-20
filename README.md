@@ -26,5 +26,8 @@ Toutes ces modifications sont référencées : l'utilisateur connecté peut éga
 Pour utliser cette application, vous devez être sous Linux et utliser Python3. Vous devez cloner le dépôt github, y créer un environnement virtuel, installer les librairies utilisées et, enfin, lancer l'application.
 
 * Cloner le dépôt Devoir_Python_2021 : `git clone https://github.com/Marie-TNAH/Devoir_Python_2021`;
-* 
+* Aller dans le dossier Devoir_Python_2021 : `cd Devoir_Python_2021`;
+* Créer l'environnement virtuel : `virtualenv env -p python3` ;
+* Installer les librairies :
+`* installer le framework Flask`
 
