@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 
 # On importe les librairies utiles:
 import datetime
@@ -76,8 +79,8 @@ class User(UserMixin, db.Model):
         return self.user_id
 
 @login.user_loader
-def charger_utilisateur(login: int):
-    return User.query.get(login)
+def charger_utilisateur(login):
+    return User.query.get(int(login))
 
 
 @app.route("/")
