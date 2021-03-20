@@ -4,9 +4,10 @@ Dans le cadre de notre deuxième année de master Technologies numériques appli
 
 ## L'origine de l'application
 
-L'application a été créée dans le cadre de l'évaluation du cours python dispensé en seconde année de master Technologies numériques appliquées à l'histoire à l'Ecole nationale des chartes en 2021.
+📚 L'application a été créée dans le cadre de l'évaluation du cours python dispensé en seconde année de master Technologies numériques appliquées à l'histoire à l'Ecole nationale des chartes en 2021.
 
-📚 	Les données des documents évoquées ont été collectées par Anne Fleuret dans le cadre de son master de recherche en histoire médiévale à l'université Panthéon-Sorbonne. Elle nous permet gracieusement de les exploiter pour notre travail. Elle-même s'est appuyée sur le travail d'Henri Stein, chartiste, archiviste et historien, et plus particulièrement sur son inventaire des registres du parlement de Paris.📙
+Les données des documents évoquées ont été collectées par Anne Fleuret dans le cadre de son master de recherche en histoire médiévale à l'université Panthéon-Sorbonne. Elle nous permet gracieusement de les exploiter pour notre travail. Elle-même s'est appuyée sur le travail d'Henri Stein, chartiste, archiviste et historien, et plus particulièrement sur son inventaire des registres du parlement de Paris.📙
+
 
 ## Fonctionnalités
 
@@ -17,5 +18,13 @@ Les données de l'application peuvent être modifiées et enrichies : pour ce fa
 * supprimer une notice ;
 * ajouter une notice. 
 
-Toutes ces modifications sont référencées : l'utilisateur connecté peut également avoir accès à une page listant des modifications effectuées.
+Toutes ces modifications sont référencées : l'utilisateur connecté peut également avoir accès à une page listant des modifications effectuées.🖋
+
+
+## Installation
+
+Pour utliser cette application, vous devez être sous Linux et utliser Python3. Vous devez cloner le dépôt github, y créer un environnement virtuel, installer les librairies utilisées et, enfin, lancer l'application.
+
+* Cloner le dépôt Devoir_Python_2021 : git clone https://github.com/Marie-TNAH/Devoir_Python_2021
+* 
 
