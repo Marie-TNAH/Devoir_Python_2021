@@ -111,7 +111,7 @@ def decouvrir():
     # La page 1 est la première affichée.
     page = request.args.get("page", 1)
 
-    # Les pages sont numérotées et les numéros sont des entiers. Il peut n'y avoir qu'une seule page.
+    # Les pages sont numérotées et les numéros sont des entiers. Il peut y avoir une page seulement.
     if isinstance(page, str) and page.isdigit():
         page = int(page)
     else:
