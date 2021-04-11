@@ -18,7 +18,7 @@ Les données de l'application peuvent être modifiées et enrichies : pour ce fa
 * supprimer une notice ;
 * ajouter une notice. 
 
-Toutes ces modifications sont référencées : l'utilisateur connecté peut également avoir accès à une page listant des modifications effectuées.🖋
+Toutes ces modifications sont référencées : l'utilisateur connecté peut également avoir accès à une page listant l'ensemble des modifications effectuées.🖋
 
 
 ## Installation
