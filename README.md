@@ -34,11 +34,11 @@ Installer l'application :
   * installer l'extension Flask-SQLAlchemy : `pip install flask_sqlalchemy`;
   * installer la library Flask-Login : `pip install flask-login` ;
 * Lancer l'application :
-  * Activer l'environnement virtuel : `source env/bin/activate` ;
-  * Aller dans le répertoire Mis en registre : `cd Mis\ en\ registre\ \!/` ;
-  * Aller dans le répertoire application `cd application` ;
-  * Lancer l'application : `python routes.py` ;
-  * Cliquer sur le lien fourni : http://127.0.0.1:5000/. 
+  * activer l'environnement virtuel : `source env/bin/activate` ;
+  * aller dans le répertoire Mis en registre : `cd Mis\ en\ registre\ \!/` ;
+  * aller dans le répertoire application `cd application` ;
+  * lancer l'application : `python routes.py` ;
+  * cliquer sur le lien fourni : http://127.0.0.1:5000/. 
  
  Bonne navigation !
 
