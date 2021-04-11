@@ -4,7 +4,7 @@ Dans le cadre de notre deuxième année de master Technologies numériques appli
 
 ## L'origine de l'application
 
-📚 L'application a été créée dans le cadre de l'évaluation du cours python dispensé en seconde année de master Technologies numériques appliquées à l'histoire à l'Ecole nationale des chartes en 2021.
+📚 L'application a été créée dans le cadre de l'évaluation du cours python dispensé en seconde année de master Technologies numériques appliquées à l'histoire à l'Ecole nationale des chartes durant l'année 2020-2021.
 
 Les données des documents évoquées ont été collectées par Anne Fleuret dans le cadre de son master de recherche en histoire médiévale à l'université Panthéon-Sorbonne. Elle nous permet gracieusement de les exploiter pour notre travail. Elle-même s'est appuyée sur le travail d'Henri Stein, chartiste, archiviste et historien, et plus particulièrement sur son inventaire des registres du parlement de Paris.📙
 
