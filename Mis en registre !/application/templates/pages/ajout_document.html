@@ -25,10 +25,10 @@
     {% endfor %}
 <br/>
     <div>
-    <p>Prenez garde à ne pas confondre la date du document enregistré et la date d'enregistrement du document par le parlement de Paris. De manière générale, ne remplissez pas un champ si vous n'êtes pas certain de votre information.</p>
+        <p><b>Les dates doivent être renseignées selon le format aaaa-mm-jj.</b>Prenez garde à ne pas confondre la date du document enregistré et la date d'enregistrement du document par le parlement de Paris. De manière générale, ne remplissez pas un champ si vous n'êtes pas certain de votre information.</p>
 
     <p>
-    <b>Attention: les champs regeste et date d'enregistrement doivent être remplis</b> ; sinon votre demande d'ajout ne sera pas pris en compte.
+    <b>Attention: les champs regeste et date d'enregistrement doivent être remplis</b> ; sinon votre demande d'ajout ne sera pas prise en compte.
 </p>
 </div>
 
@@ -45,7 +45,7 @@
         <br/>
         <div>
             <label for="champ_datedoc">Date du document :</label>
-            <input type="text" name="datedoc" placeholder="ex: novembre 1461" id="champ_datedoc"/>
+            <input type="text" name="datedoc" placeholder="ex:1461-11" id="champ_datedoc"/>
         </div>
         <br/>
         <div>
@@ -55,7 +55,7 @@
         <br/>
         <div>
             <label for="champ_date">Date de l'enregistrement du document (champ obligatoire) :</label>
-            <input type="text" name="date" placeholder="ex: 14 novembre 1462" id="champ_date"/>
+            <input type="text" name="date" placeholder="ex: 1462-11-14" id="champ_date"/>
         </div>
         <br/>
         <div>
@@ -65,7 +65,7 @@
         <br/>
         <div>
             <label for="champ_chcomptes">Si le document a été enregistré à la Chambre des comptes, précisez la date, sinon mettez <b>0</b>  :</label>
-            <input type="text" name="chcomptes" placeholder="ex: 3 décembre 1463 / 0 / non mentionnée" id="champ_chcomptes" style="width: 25%" />
+            <input type="text" name="chcomptes" placeholder="ex: 1463-12-03 / 0 / non mentionnée" id="champ_chcomptes" style="width: 25%" />
         </div>
         <br/>
         <button type="submit">Enregistrer les données</button>
