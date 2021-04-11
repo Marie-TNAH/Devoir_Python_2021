@@ -175,7 +175,7 @@ def recherche_nature():
     # Les correspondances trouvées sont stockées dans une liste résultats, qui au départ est vide. 
     resultats = []
 
-    # On définit l'attribut qui va être comparé aux mots clefs.
+    # On définit l'attribut qui va être comparé aux mots clefs :
     enregistrement_nature = request.args.get("enregistrement_nature", None)
 
     # si des correspondances sont trouvées, la liste des documents en question est stockée dans la variable résultats.
