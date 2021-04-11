@@ -563,7 +563,7 @@ def connexion():
     """Route permettant à l'utiisateur de se connecter et d'accéder ainsi à de nouvelles fonctionnalités."""
 
     # Cette situation ne devrait pas se produire car le bouton de connexion n'est pas accessible.
-    # Néenmoins, il appraît si l'utilisateur relance la page confirmant sa connexion.
+    # Néanmoins, il n'apparaît que si l'utilisateur relance la page confirmant sa connexion.
     if current_user.is_authenticated is True:
         flash("Vous êtes déjà connecté(e)")
         return redirect ("/")
