@@ -612,7 +612,7 @@ def fonctionnement():
     # L'utilisateur ne peut y avoir accès que s'il est identifié
     if current_user.is_authenticated is True:
         # On utilise la table Authorship qui permet de renseigner la date, le numéro de la modification, 
-        # le document et le type de modification apporté.
+        # le document et le type de modification apportée.
         authorships = Authorship.query.order_by(Authorship.authorship_id).all()
         # On utilise les clefs primaire de la table User et étrangère de la table Authorship pour 
         # récupérer le login de l'utilisateur à l'origine de la modification. 
