@@ -305,7 +305,7 @@ def index_mode():
 def index_chcomptes():
     """Route permettant d'accéder à la liste des documents ayant également fait l'objet d'un enregistrement à la Chambre des comptes."""
 
-    # Les documents qui ne n'ont pas été enregistrés à la chambre des comptes ont la valeur 0.
+    # Les documents qui ont été enregistrés à la chambre des comptes n'ont pas la valeur 0.
     enregistrements = Enregistrement.query.filter(Enregistrement.enregistrement_chcomptes != "0").all()
 
     return render_template("pages/index_chcomptes.html", enregistrements=enregistrements)
