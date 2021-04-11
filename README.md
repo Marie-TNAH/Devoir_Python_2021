@@ -35,7 +35,7 @@ Installer l'application :
   * installer la library Flask-Login : `pip install flask-login` ;
 * Lancer l'application :
   * activer l'environnement virtuel : `source env/bin/activate` ;
-  * aller dans le répertoire Mis en registre : `cd Mis\ en\ registre\ \!/` ;
+  * aller dans le répertoire Mis en registre : `cd Mis_en_registre` ;
   * aller dans le répertoire application `cd application` ;
   * lancer l'application : `python routes.py` ;
   * cliquer sur le lien fourni : http://127.0.0.1:5000/. 
