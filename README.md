@@ -11,7 +11,7 @@ Les données des documents évoquées ont été collectées par Anne Fleuret dan
 
 ## Fonctionnalités
 
-📜 	L'application présente des documents enregistrés par le parlement de Paris, c'est à dire copiés dans un registre. Chacun d'eux est renseigné par une notice. Les utilisateurs peuvent effectuer des recherches plein-texte parmi les regestes ou dans l'ensembles des données fournies. Ils peuvent également rechercher un type de document précis. Afin d'avoir une vue d'ensemble des documents enregistrés, ils peuvent également consulter les index.
+📜 	L'application présente des documents enregistrés par le parlement de Paris, c'est à dire copiés dans un registre. Chacun d'eux est renseigné par une notice. Les utilisateurs peuvent effectuer des recherches plein-texte parmi les regestes ou dans l'ensembles des données fournies. Ils peuvent également rechercher un type de document précis. Afin d'avoir une vue d'ensemble des documents enregistrés, ils peuvent consulter les index.
 
 Les données de l'application peuvent être modifiées et enrichies : pour ce faire, l'utilisateur doit s'inscrire et se connecter. Il pourra ainsi accéder à de nouvelles fonctionnalités :
 * modifier les données d'une notice ;
