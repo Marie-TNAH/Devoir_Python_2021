@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<title>Mis en registre !</title>
+    <head>
+        <p style="font-family:eufm10">Mis en registre !</p>
+        {% if current_user.is_authenticated %}
+        <p>
+            {{current_user.user_login}}   
+        </p>
+       {% endif %}
+    </head>
+<body leftmargin="125">  
+    	<h1 style="font-family:eufm10">Vous avez ajouté un document sur la base !</h1>
+    	<div>
+    		<table border="2px" style=" border-color:#40FF00;" class="tabcenter"><tr>
+   <td align="center">
+        <p>{{validation}}</p>
+    </td>
+</tr>
+</table>
+        <p>Merci pour votre contribution.</p>
+
+   <p><a href="{{url_for('index')}}">Retour aux index</a> <a href="{{url_for('accueil')}}">Retour à l'accueil</a> <a href="{{url_for('decouvrir')}}">Poursuivre l'exploration de la base</a> <a href="{{url_for('presentation')}}">L'origine de l'application</a> {% if current_user.is_authenticated %}<a href="{{url_for('fonctionnement')}}">Voir l'évolution de la base</a>{% endif %}</p>
+</div>
+</body>
+</html>

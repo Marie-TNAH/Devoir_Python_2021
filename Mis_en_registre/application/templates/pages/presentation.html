@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<title>Mis en registre !</title>
+    <head>
+        <p><font style="font-family:eufm10">Mis en registre !</font></p>
+        <p>
+        {% if current_user.is_authenticated %}
+        
+            {{current_user.user_login}}   
+        </p>
+       {% endif %}
+    </head>
+<body>
+
+<h1><p align="center" font style="font-family:eufm10">A l'origine de l'application ...</p></h1>
+
+ <span style="position: absolute; left: 550px">
+<a href="https://fr.wikipedia.org/wiki/Louis_XI#/media/Fichier:Louis_XI_(1423-1483).jpg"><img src="static/images/louis11.jpg" alt="Louis XI" style="width : 20%"/></a>
+<figcaption><font color="grey" size="1">
+Portrait de Louis XI, huile sur toile <br/>attribuée à Jacob de Littemont (vers 1469).</font></figcaption>
+</span>
+
+<span style="position: absolute; left: 900px">
+    <a href="https://criminocorpus.org/fr/expositions/art-et-justice/plume-de-greffier/la-galerie-du-parlement/">
+<img src="static/images/gallerie.png" alt="parlement" style="width : 90%"/></a>
+<figcaption><font color="grey" size="1">
+Les archives du parlement de Paris au sein des "grands dépôts" (construits sous Louis-Philippe et Napoléon III) dans une gallerie évoquant l'ancien siège de l'institution (Archives nationales, Paris).</font></figcaption>
+</span>
+<br/>
+<br/>
+{% if not current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for('inscription')}}" method="GET">
+      <button>S'inscrire</button>  
+    </form>
+</div>
+<br/>
+<div>
+    <form class="form-inline" action="{{url_for('connexion')}}" method="GET">
+      <button>Se connecter</button>  
+    </form>
+</div>
+{% endif %}
+<br/>
+{% if current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for('deconnexion')}}" method="GET">
+      <button>Se déconnecter</button>  
+    </form>
+</div>
+<br/>
+{% endif %}
+<div>
+<form class="form-inline" action="{{url_for("recherche")}}" method="GET">
+          <input class="form-control" name="keyword" type="search" placeholder="Recherche rapide" aria-label="Recherche">
+          <button class="btn btn-outline-info" type="submit">Rechercher dans les regestes</button>
+</form>
+<br/>
+<form class="form-inline" action="{{url_for("recherche_avancee")}}" method="GET">
+    <input class="form-control" name="keyword" type="search" placeholder="Recherche avancée" aria-label="Recherche">
+    <button>Elargir votre recherche</button>
+</form>
+<br/>
+<form class="form-inline" action="{{url_for("recherche_nature")}}" method="GET">
+    <select name="enregistrement_nature">
+        <option value="Charte">Charte</option>
+        <option value="Lettre patente">Lettre patente</option>
+        <option value="Mandement">Mandement</option>
+        <option value="Ordonnance">Ordonnance</option>
+    </select>
+    <button>Rechercher un type de documents enregistrés</button>   
+</form>
+</div>
+<br/>
+<div>
+    <form class="form-inline" action="{{url_for("index")}}" method="GET">
+    <button>Consulter les index !</button>
+    </form>
+</div>
+<br/>
+{% if current_user.is_authenticated %}
+<div>
+    <form class="form-inline" action="{{url_for("ajout_document")}}" method="GET">
+      <button>Ajouter un document à la base</button>  
+    </form>
+</div>
+{% endif %}
+<br/>
+<br/>
+<div align="justify">
+  <p>Le contenu de l'application repose sur le travail préparatoire d'Anne Fleuret, alors étudiante en histoire, pour son mémoire de du Master Recherche Histoire et anthropologie des sociétés médiévales et modernes de l’Université Paris I Panthéon-Sorbonne.</p>
+  <p>   
+   Ce travail s’intitulait <i>Enregistrer et entériner au Parlement de Paris : la fabrique de la loi sous le règne de Louis XI</i>. Il a été mené sous la direction d’<a href="https://www.pantheonsorbonne.fr/recherche/page-perso/page/?tx_oxcspagepersonnel_pi1[uid]=matteoni">Olivier Mattéoni</a>, professeur d’Histoire médiévale à l’Université Paris I et a été soutenu en mars 2019 devant <a href="https://www.pantheonsorbonne.fr/recherche/page-perso/page/?tx_oxcspagepersonnel_pi1[uid]=matteoni">Olivier Mattéoni</a> et <a href="https://droit.univ-nantes.fr/frederic-martin">Frédéric Martin</a>, professeur d’Histoire du droit à l’Université de Nantes. Le but était d’étudier le rôle de l’entérinement et de l’enregistrement dans la fabrique de la loi et de reconstituer les différentes étapes de l’entérinement et de la procédure suivie par le Parlement. Le mémoire comportait également une étude de cas sur les refus d’entérinement. Enfin, l’étude des sources autres que celles du Parlement de Paris a permis de comparer les processus d’enregistrement avec ceux de la Chambre des Comptes et des parlements provinciaux.</p>
+   <p>
+   La base de données qui est ici mise à disposition s’appuie principalement sur l’inventaire réalisé par Henri Stein. Il a été confronté aux registres d’enregistrement, la rubrique « mode d’enregistrement » n’étant pas mentionnée par Henri Stein. La rubrique « enregistrement à la Chambre des Comptes » s’appuient sur les mémoriaux de la Chambre des Comptes. Ces mémoriaux sont une reconstitution des archives de la Chambre des Comptes, qui ont brulé en 1737. Les informations qui en ont été extraites sont donc lacunaires.</p>
+</div>
+<div>
+  <p><b>Sources :</b></p>
+  <ul>
+    <li><b>STEIN H.</b>, <i>Inventaire analytique des ordonnances enregistrées au Parlement de Paris jusqu'à la mort de Louis XII</i>, Impr. Paris, nationale, 1908.</li>
+    <li><b>X1a 8605</b> Registre d’enregistrement (1461)</li>
+    <li><b>X1a 8606</b> Registre d’enregistrement (1461 - 1482)</li>
+    <li><b>PP 135</b> Mémoriaux de la Chambre des Comptes</li>
+  </ul>
+</div>
+<div>
+<p><a href="{{url_for('accueil')}}">Retour à l'accueil</a> <a href="{{url_for('index')}}">Explorez les index</a> <a href="{{url_for('decouvrir')}}">Découvrir les actes enregistrés</a> {% if current_user.is_authenticated %}<a href="{{url_for('fonctionnement')}}">Voir l'évolution de la base</a>{% endif %}</p>
+</div>
+</body>
+</html>
